@@ -190,3 +190,4 @@ C:\Users\Kevin Katsura\Documents\Internship\BNI\BNITechship-Enrollment-Services-
 C:\Users\Kevin Katsura\Documents\Internship\BNI\BNITechship-Enrollment-Services-Training\obj\Debug\net5.0\ref\AlphaAPI.dll
 C:\Users\Kevin Katsura\Documents\Internship\BNI\BNITechship-Enrollment-Services-Training\obj\Debug\net5.0\AlphaAPI.pdb
 C:\Users\Kevin Katsura\Documents\Internship\BNI\BNITechship-Enrollment-Services-Training\obj\Debug\net5.0\AlphaAPI.genruntimeconfig.cache
+C:\Users\ASUS\BNITechship-Enrollment-Services-Training\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
