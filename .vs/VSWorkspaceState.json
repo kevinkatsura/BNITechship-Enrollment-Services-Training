@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Data",
+    "\\Migrations",
+    "\\Models"
+  ],
+  "SelectedNode": "\\appsettings.Development.json",
+  "PreviewInSolutionExplorer": false
+}
