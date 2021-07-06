@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj": {}
+    "C:\\Users\\Kevin Katsura\\Documents\\Internship\\BNI\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj": {
+    "C:\\Users\\Kevin Katsura\\Documents\\Internship\\BNI\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Kevin Katsura\\Documents\\Internship\\BNI\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj",
         "projectName": "AlphaAPI",
-        "projectPath": "C:\\Users\\ASUS\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\BNITechship-Enrollment-Services-Training\\obj\\",
+        "projectPath": "C:\\Users\\Kevin Katsura\\Documents\\Internship\\BNI\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj",
+        "packagesPath": "C:\\Users\\Kevin Katsura\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kevin Katsura\\Documents\\Internship\\BNI\\BNITechship-Enrollment-Services-Training\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kevin Katsura\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[5.0.7, )"
