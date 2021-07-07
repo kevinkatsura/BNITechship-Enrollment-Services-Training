@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace AlphaAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class StudentsController : ControllerBase
