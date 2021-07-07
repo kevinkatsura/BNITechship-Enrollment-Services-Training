@@ -101,5 +101,19 @@ namespace AlphaAPI.Data
                 throw new Exception($"Error: {ex.Message}");
             }
         }
+
+        public async Task<IEnumerable<Course>> SearchCourse(string keyword)
+        {
+            var courses = await _db.Courses.ToListAsync();
+            List<Course> listCourse = new List<Course>();
+            foreach (Course course in courses)
+            {
+                if (await BoyerMoore.BoyerMooreHorsepool(keyword.ToLower(), course.Title.ToLower()) == 0)
+                {
+                    listCourse.Add(course);
+                }
+            };
+            return listCourse;
+        }
     }
 }

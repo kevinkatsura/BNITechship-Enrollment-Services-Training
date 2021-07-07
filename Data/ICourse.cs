@@ -8,6 +8,6 @@ namespace AlphaAPI.Data
 {
     public interface ICourse : ICrud<Course>
     {
-
+        public Task<IEnumerable<Course>> SearchCourse(string keyword);
     }
 }

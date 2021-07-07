@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace AlphaAPI.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class StudentsController : ControllerBase
@@ -23,19 +22,22 @@ namespace AlphaAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Student>> GetAllStudents() {
+        public async Task<IEnumerable<Student>> GetAllStudents()
+        {
             var result = await _student.GetAll();
             return result;
         }
 
         [HttpGet("{id}")]
-        public async Task<Student> GetStudent(String id) {
+        public async Task<Student> GetStudent(String id)
+        {
             var result = await _student.GetById(id);
             return result;
         }
-        
+
         [HttpPost]
-        public async Task<IActionResult> InsertStudent([FromBody] Student student) {
+        public async Task<IActionResult> InsertStudent([FromBody] Student student)
+        {
             try
             {
                 await _student.Insert(student);
@@ -48,7 +50,8 @@ namespace AlphaAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateStudent(string id, [FromBody] Student student) {
+        public async Task<IActionResult> UpdateStudent(string id, [FromBody] Student student)
+        {
             try
             {
                 await _student.Update(id, student);
@@ -61,7 +64,8 @@ namespace AlphaAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteStudent(string id) {
+        public async Task<IActionResult> DeleteStudent(string id)
+        {
             try
             {
                 await _student.Delete(id);
@@ -71,6 +75,12 @@ namespace AlphaAPI.Controllers
             {
                 return BadRequest(e.Message);
             }
+        }
+
+        [HttpGet("search/{keyword}")]
+        public async Task<IEnumerable<Student>> SearchStudent(string keyword)
+        {
+            return await _student.SearchStudent(keyword);
         }
     }
 }

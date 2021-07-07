@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace AlphaAPI.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CoursesController : ControllerBase
@@ -80,6 +79,14 @@ namespace AlphaAPI.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpGet("search/{keyword}")]
+        public async Task<IEnumerable<Course>> SearchCourse(string keyword)
+        {
+            var results = await _course.SearchCourse(keyword);
+            return results;
+
         }
     }
 }

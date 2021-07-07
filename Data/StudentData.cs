@@ -93,5 +93,19 @@ namespace AlphaAPI.Data
                 throw new Exception($"Error: {e.Message}");
             }
         }
+
+        public async Task<IEnumerable<Student>> SearchStudent(string keyword)
+        {
+            var students = await _db.Students.ToListAsync();
+            List<Student> listStudent = new List<Student>();
+            foreach (Student student in students)
+            {
+                if (await BoyerMoore.BoyerMooreHorsepool(keyword.ToLower(), $"{student.FirstMidName.ToLower()} {student.LastName.ToLower()}") == 0)
+                {
+                    listStudent.Add(student);
+                }
+            };
+            return listStudent;
+        }
     }
 }
