@@ -26,11 +26,11 @@ namespace AlphaAPI.Data
         {
             var result = await (from s in _db.Courses
                                 where s.CourseId == Convert.ToInt32(id)
-                                select s).AsNoTracking().FirstOrDefaultAsync();
+                                select s).FirstOrDefaultAsync();
 
             var enrollments = await (from e in _db.Enrollments.Include(e => e.Course)
                                      where e.CourseId == Convert.ToInt32(id)
-                                     select e).AsNoTracking().ToListAsync();
+                                     select e).ToListAsync();
 
             result.Enrollments = enrollments;
             

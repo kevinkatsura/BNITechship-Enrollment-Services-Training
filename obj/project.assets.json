@@ -5689,23 +5689,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Kevin Katsura\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Kevin Katsura\\Documents\\Internship\\BNI\\Excercise\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj",
       "projectName": "AlphaAPI",
-      "projectPath": "C:\\Users\\ASUS\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\BNITechship-Enrollment-Services-Training\\obj\\",
+      "projectPath": "C:\\Users\\Kevin Katsura\\Documents\\Internship\\BNI\\Excercise\\BNITechship-Enrollment-Services-Training\\AlphaAPI.csproj",
+      "packagesPath": "C:\\Users\\Kevin Katsura\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kevin Katsura\\Documents\\Internship\\BNI\\Excercise\\BNITechship-Enrollment-Services-Training\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kevin Katsura\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
