@@ -26,27 +26,29 @@ namespace AlphaAPI.Data
         {
             var result = await (from s in _db.Courses
                                 where s.CourseId == Convert.ToInt32(id)
-                                select s).FirstOrDefaultAsync();
+                                select s).AsNoTracking().FirstOrDefaultAsync();
 
             var enrollments = await (from e in _db.Enrollments.Include(e => e.Course)
                                      where e.CourseId == Convert.ToInt32(id)
                                      select e).AsNoTracking().ToListAsync();
 
             result.Enrollments = enrollments;
-
+            
             return result;
         }
 
         public async Task Delete(string id)
         {
             var result = await GetById(id);
-            
+            var list = result.Enrollments.ToList();
+            var result2 = await GetById(id);
             if (result != null)
             {
                 try
                 {
-                    _db.Enrollments.RemoveRange(_db.Enrollments.Where(e => e.CourseId==result.CourseId));
-                    _db.Courses.Remove(result);
+                    _db.Enrollments.RemoveRange(list);
+                    _db.SaveChanges();
+                    _db.Courses.Remove(result2);
                     await _db.SaveChangesAsync();
                 }
                 catch (DbUpdateException dbEx)
