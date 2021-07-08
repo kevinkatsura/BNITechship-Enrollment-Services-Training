@@ -22,6 +22,7 @@ namespace AlphaAPI.Data
                 var result =  await GetById(id);
                 if ( result != null )
                 {
+                    _db.Enrollments.RemoveRange(_db.Enrollments.Where(e => e.StudentId==result.Id));
                     _db.Students.Remove(result);
                     await _db.SaveChangesAsync();
                 } else

@@ -29,7 +29,7 @@ namespace AlphaAPI.Data
                                 select s).FirstOrDefaultAsync();
 
             var enrollments = await (from e in _db.Enrollments.Include(e => e.Course)
-                                     where e.StudentId == Convert.ToInt32(id)
+                                     where e.CourseId == Convert.ToInt32(id)
                                      select e).AsNoTracking().ToListAsync();
 
             result.Enrollments = enrollments;
@@ -40,10 +40,12 @@ namespace AlphaAPI.Data
         public async Task Delete(string id)
         {
             var result = await GetById(id);
+            
             if (result != null)
             {
                 try
                 {
+                    _db.Enrollments.RemoveRange(_db.Enrollments.Where(e => e.CourseId==result.CourseId));
                     _db.Courses.Remove(result);
                     await _db.SaveChangesAsync();
                 }
